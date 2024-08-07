@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { useSession, signIn } from "next-auth/react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 
 export default function Hero({ product }) {
@@ -50,18 +51,18 @@ export default function Hero({ product }) {
                                 <div className="flex items-center space-x-6 lg:space-x-8">
                                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                         <div className="w-72 h-80 overflow-hidden rounded-lg border border-secondary transform rotate-3 translate-x-4 hover:-rotate-6 hover:translate-x-8 transition-transform duration-300 ease-in-out">
-                                            <img src={product.images[0]} alt="" className="h-full w-full object-cover object-center" />
+                                            <Image src={product.images[0]} alt="" className="h-full w-full object-cover object-center" />
                                         </div>
                                         <div className="w-72 h-80 overflow-hidden rounded-lg border border-secondary transform -rotate-2 translate-x-2 hover:rotate-4 hover:translate-x-4 transition-transform duration-300 ease-in-out">
-                                            <img src={product.images[1]} alt="" className="h-full w-full object-cover object-center" />
+                                            <Image src={product.images[1]} alt="" className="h-full w-full object-cover object-center" />
                                         </div>
                                     </div>
                                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                         <div className="w-72 h-80 overflow-hidden rounded-lg border border-secondary transform rotate-1 translate-x-3 hover:-rotate-2 hover:translate-x-4 transition-transform duration-300 ease-in-out">
-                                            <img src={product.images[2]} alt="" className="h-full w-full object-cover object-center" />
+                                            <Image src={product.images[2]} alt="" className="h-full w-full object-cover object-center" />
                                         </div>
                                         <div className="w-72 h-80 overflow-hidden rounded-lg border border-secondary transform -rotate-4 translate-x-2 hover:rotate-8 hover:translate-x-3 transition-transform duration-300 ease-in-out">
-                                            <img src={product.images[3]} alt="" className="h-full w-full object-cover object-center" />
+                                            <Image src={product.images[3]} alt="" className="h-full w-full object-cover object-center" />
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +138,7 @@ export default function Hero({ product }) {
 //                                         All Products
 //                                     </Link>
 //                                     <div className="h-80 overflow-hidden rounded-lg border border-secondary">
-//                                         <img src={product.images[0]} alt={product.title} className="h-full w-full object-cover object-center" />
+//                                         <Image src={product.images[0]} alt={product.title} className="h-full w-full object-cover object-center" />
 //                                     </div>
 //                                 </div>
 //                             ))}

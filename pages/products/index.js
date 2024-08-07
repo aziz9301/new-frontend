@@ -80,12 +80,12 @@
 //                   <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
 //                     <div className="">
 //                       <div className="relative md:h-[300px] h-[200px]">
-//                         <img
+//                         <Image
 //                           src={product.images[0]}
 //                           alt=""
 //                           className="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0"
 //                         />
-//                         <img
+//                         <Image
 //                           src={product.images[1]}
 //                           alt=""
 //                           className="absolute inset-0 h-full w-full object-contain opacity-0 group-hover:opacity-100"
@@ -320,12 +320,12 @@
 //                     <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
 //                       <div className="">
 //                         <div className="relative md:h-[300px] h-[200px]">
-//                           <img
+//                           <Image
 //                             src={product.images[0]}
 //                             alt=""
 //                             className="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0"
 //                           />
-//                           <img
+//                           <Image
 //                             src={product.images[1]}
 //                             alt=""
 //                             className="absolute inset-0 h-full w-full object-contain opacity-0 group-hover:opacity-100"
@@ -388,6 +388,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { useSession, signIn } from "next-auth/react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 // Utility function to format price with a comma for thousands
 const formatPrice = (price) => {
@@ -579,7 +580,7 @@ export default function Products({ allProducts, categories = [] }) {
                 {filteredProducts.map((product) => (
                   <div key={product._id} className="group block border border-accent rounded-xl border-opacity-10 overflow-hidden">
                     <div className="relative h-48 md:h-60">
-                      <img
+                      <Image
                         src={product.images[0]}
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover"

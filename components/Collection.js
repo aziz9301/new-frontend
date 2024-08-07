@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const formatPrice = (price) => {
@@ -43,7 +44,7 @@ export default function Collection({ product }) {
                                 <ul className="grid grid-cols-2 gap-4">
                                     <li>
                                         <div className="block group">
-                                            <img
+                                            <Image
                                                 src={product.images[0]}
                                                 alt=""
                                                 className="object-cover w-full rounded aspect-square"
@@ -52,7 +53,7 @@ export default function Collection({ product }) {
                                     </li>
                                     <li>
                                         <div className="block group">
-                                            <img
+                                            <Image
                                                 src={product.images[1]}
                                                 alt=""
                                                 className="object-cover w-full rounded aspect-square"

@@ -5,6 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 const formatPrice = (price) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -110,7 +111,8 @@ export default function Cart() {
                                     <div key={product._id} className="mt-8">
                                         <ul className="space-y-4">
                                             <li className="flex items-center gap-4 justify-between">
-                                                <img
+                                                <Image                                     
+
                                                     src={product.images[0]}
                                                     alt=""
                                                     className="h-16 w-16 rounded object-cover"
