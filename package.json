@@ -23,7 +23,7 @@
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "react-spinners": "^0.13.8",
     "stripe": "^15.11.0"
   },
