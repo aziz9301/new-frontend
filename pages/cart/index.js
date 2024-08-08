@@ -77,12 +77,13 @@ export default function Cart() {
     }
 
     function increaseProduct(id, stock) {
-        if (cartProducts.filter(id => id === product._id).length < stock) {
+        if (cartProducts.filter(productId => productId === id).length < stock) {
             addProduct(id);
         } else {
             toast.error('Produk Mau Habis');
         }
     }
+    
 
     function decreaseProduct(id) {
         removeProduct(id);

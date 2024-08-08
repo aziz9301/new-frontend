@@ -5,7 +5,7 @@ import { Product } from "@/models/Product";
 const midtransClient = require('midtrans-client');
 
 const midtrans = new midtransClient.Snap({
-    isProduction: false, // Set to true for production
+    isProduction: true, // Set to true for production
     serverKey: process.env.MIDTRANS_SERVER_KEY,
     clientKey: process.env.NEXT_PUBLIC_CLIENT,
 });
