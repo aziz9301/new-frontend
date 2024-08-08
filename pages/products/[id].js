@@ -17,23 +17,23 @@
 //     return (
 //       <section className="mt-20 md:mt-6 ">
 //         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-//           {/* Image section */}
+//           {/* img section */}
 //           <div className="lg:aspect-h-2 lg:aspect-w-2 lg:rounded-lg overflow-hidden px-4 md:px-2">
-//             <Image
+//             <img
 //               src={product.images[0]}
 //               alt={product.images[0]}
 //               className="w-full h-full md:h-[90vh] object-cover object-center border border-primary rounded-lg"
 //             />
 //           </div>
 //           <div className="grid grid-cols-2 lg:grid lg:grid-cols-1 lg:gap-y-4 px-2 gap-2 md:gap-0 md:px-2">
-//             {product.images.slice(1, 3).map((image, index) => (
+//             {product.images.slice(1, 3).map((img, index) => (
 //               <div
 //                 key={index}
 //                 className="lg:aspect-h-2 lg:aspect-w-3 lg:overflow-hidden lg:rounded-lg "
 //               >
-//                 <Image
-//                   src={image}
-//                   alt={image}
+//                 <img
+//                   src={img}
+//                   alt={img}
 //                   className="w-full h-full md:h-[44vh] object-cover object-center border rounded-lg border-secondary p-4"
 //                 />
 //               </div>
@@ -145,7 +145,7 @@ import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
 import { Category } from "@/models/Category";
 import { Brand } from "@/models/Brand";
-import Image from "next/image";
+
 
 const formatPrice = (price) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -164,23 +164,23 @@ export default function ProductPage({ product }) {
     return (
       <section className="mt-20 md:mt-6 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Image section */}
+          {/* img section */}
           <div className="lg:aspect-h-2 lg:aspect-w-2 lg:rounded-lg overflow-hidden px-4 md:px-2">
-            <Image
+            <img
               src={product.images[0]}
               alt={product.images[0]}
               className="w-full h-full md:h-[90vh] object-cover object-center border border-primary rounded-lg"
             />
           </div>
           <div className="grid grid-cols-2 lg:grid lg:grid-cols-1 lg:gap-y-4 px-2 gap-2 md:gap-0 md:px-2">
-            {product.images.slice(1, 3).map((image, index) => (
+            {product.images.slice(1, 3).map((img, index) => (
               <div
                 key={index}
                 className="lg:aspect-h-2 lg:aspect-w-3 lg:overflow-hidden lg:rounded-lg "
               >
-                <Image
-                  src={image}
-                  alt={image}
+                <img
+                  src={img}
+                  alt={img}
                   className="w-full h-full md:h-[44vh] object-cover object-center border rounded-lg border-secondary p-4"
                 />
               </div>

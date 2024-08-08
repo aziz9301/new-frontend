@@ -23,13 +23,13 @@
 //                             <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
 //                                 <div className="p-1">
 //                                     <div className="relative h-[300px] sm:h-[300px]">
-//                                         <Image
+//                                         <img
 //                                             src={product.images[0]}
 //                                             alt=""
 //                                             className="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0"
 //                                         />
 
-//                                         <Image
+//                                         <img
 //                                             src={product.images[1]}
 //                                             alt=""
 //                                             className="absolute inset-0 h-full w-full object-contain opacity-0 group-hover:opacity-100"
@@ -83,7 +83,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { useSession, signIn } from "next-auth/react";
 import toast from "react-hot-toast";
-import Image from "next/image";
+
 
 // Utility function to format price with a comma for thousands
 const formatPrice = (price) => {
@@ -115,13 +115,13 @@ export default function Products({ products }) {
                             <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
                                 <div className="p-1">
                                     <div className="relative h-[300px] sm:h-[300px]">
-                                        <Image
+                                        <img
                                             src={product.images[0]}
                                             alt=""
                                             className="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0"
                                         />
 
-                                        <Image
+                                        <img
                                             src={product.images[1]}
                                             alt=""
                                             className="absolute inset-0 h-full w-full object-contain opacity-0 group-hover:opacity-100"

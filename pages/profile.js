@@ -283,7 +283,7 @@ export default function Profile() {
 //             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 //           />
 //           {photo && (
-//             <Image src={photo} alt="Profile" className="mt-4 w-32 h-32 rounded-full" />
+//             <img src={photo} alt="Profile" className="mt-4 w-32 h-32 rounded-full" />
 //           )}
 //         </div>
 //         <div className="flex items-center justify-between">
