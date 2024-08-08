@@ -14,10 +14,7 @@ export default function Collection({ product }) {
                         Obat Baru
                     </h2>
                 </header>
-                <p className="max-w-lg mx-auto mt-4 text-gray-500">
-                    Temukan Obat Baru
-                </p>
-
+                
                 <div>
                     <div className="max-w-screen-2xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">

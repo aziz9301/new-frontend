@@ -27,7 +27,7 @@ export default function Hero({ product }) {
                     <div className="relative mx-auto sm:static sm:px-6 lg:px-8">
                         <div className="sm:max-w-xl text-start">
                             <h1 className="text-4xl sm:text-5xl lg:text-5xl max-md:mb-6 font-bold tracking-tight text-primary">
-                                At <span className="text-accent">50%</span> Off
+                                Beli <span className="text-accent">Sekarang</span> 
                             </h1>
                             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-text">
                                 {product.title}
