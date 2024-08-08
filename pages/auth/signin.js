@@ -75,14 +75,16 @@ import { signIn } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; 
 
 export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false); 
     const router = useRouter();
 
-    // Use useEffect to handle errors in query parameters
+
     useEffect(() => {
         if (router.query.error) {
             setError(router.query.error);
@@ -92,12 +94,11 @@ export default function SignIn() {
     const handleGoogleSignIn = async () => {
         try {
             const result = await signIn('google', {
-                redirect: false, // Prevent automatic redirection
+                redirect: false, 
             });
             if (result.error) {
                 setError(result.error);
             } else {
-                // Handle successful Google sign-in (e.g., redirect to home)
                 router.replace('/');
             }
         } catch (error) {
@@ -116,7 +117,7 @@ export default function SignIn() {
         if (res.error) {
             setError(res.error);
         } else {
-            // Redirect to home page after successful login
+
             router.replace('/');
         }
     };
@@ -133,14 +134,23 @@ export default function SignIn() {
                     required
                     className="w-full p-2 border rounded"
                 />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    required
-                    className="w-full p-2 border rounded"
-                />
+                <div className="relative">
+                    <input
+                        type={showPassword ? 'text' : 'password'} 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        required
+                        className="w-full p-2 border rounded pr-10"
+                    />
+                    <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)} 
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600"
+                    >
+                        {showPassword ? <FaEyeSlash /> : <FaEye />} {}
+                    </button>
+                </div>
                 <button
                     type="submit"
                     className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"

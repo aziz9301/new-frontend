@@ -47,6 +47,7 @@
 // pages/auth/signup.js
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export default function SignUp() {
     const [name, setName] = useState('');
@@ -54,6 +55,7 @@ export default function SignUp() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const router = useRouter();
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -96,14 +98,24 @@ export default function SignUp() {
                     required
                     className="w-full p-2 border rounded"
                 />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    required
-                    className="w-full p-2 border rounded"
-                />
+                <div className="relative">
+                    <input
+                        type={showPassword ? 'text' : 'password'}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        required
+                        className="w-full p-2 border rounded"
+                    />
+                    <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600"
+                    >
+                        {showPassword ? <FaEyeSlash /> : <FaEye />} { }
+                    </button>
+                </div>
+
                 <button
                     type="submit"
                     className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
