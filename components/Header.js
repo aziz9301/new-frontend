@@ -38,7 +38,7 @@
 //                         {session ? (
 //                             <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
 //                                 <div className="h-9 w-9">
-//                                     <Image className="h-full w-full rounded-full object-cover object-center" src={session.user.image} alt={session.user.email} />
+//                                     <img className="h-full w-full rounded-full object-cover object-center" src={session.user.img} alt={session.user.email} />
 //                                 </div>
 //                             </div>
 //                         ) : (

@@ -52,7 +52,7 @@ export default function Cart() {
         try {
             const response = await axios.post('/api/checkout', {
                 email: session.user.email,
-                name: session.user.name,
+                name,
                 address,
                 state,
                 zip,
@@ -221,7 +221,7 @@ export default function Cart() {
                                     </div>
                                     <div className="col-span-6">
                                         <label className="mb-1 block text-sm font-medium text-text">Full Name</label>
-                                        <input type="text" name="name" className="block w-full rounded-md p-3 border border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500" value={session.user.name} disabled placeholder='Full name' />
+                                        <input type="text" name="name" className="block w-full rounded-md p-3 border border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500" value={name} onChange={ev => setName(ev.target.value)} required/>
                                     </div>
                                     <div className="col-span-12">
                                         <label className="mb-1 block text-sm font-medium text-text">Address</label>
